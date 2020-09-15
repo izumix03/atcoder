@@ -1,46 +1,24 @@
-#include <stdio.h>
+#include <string>
+#include <iostream>
+#include <algorithm>
 // http://judge.u-aizu.ac.jp/onlinejudge/finder.jsp?course=ITP1
-// http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_9_C
+// http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_9_A
 
 using namespace std;
 
 int main() {
-  int n;
-  scanf("%d", &n);
+  string W, T, TL;
+  cin >> W;
+  int count = 0;
 
-  char taro_card[101], hanako_card[101];
-  int taro = 0, hanako = 0;
+  while (cin >> T) {
+    if (T == "END_OF_TEXT") break;
 
-  for (int i = 1; i <= n; i++) {
-    scanf("%s %s", taro_card, hanako_card);
+    transform(T.begin(), T.end(), T.begin(), ::tolower);
 
-    for (int j = 0; taro_card[j] != '\0'; j++) {
-      if (hanako_card[j] > taro_card[j]) {
-        hanako += 3;
-        break;
-      }
-      if (hanako_card[j] < taro_card[j]) {
-        taro += 3;
-        break;
-      }
-
-      if (taro_card[j+1] == '\0' && hanako_card[j+1] == '\0') {
-        taro++;
-        hanako++;
-        break;
-      }
-
-      if (taro_card[j+1] == '\0') {
-        hanako += 3;
-        break;
-      }
-
-      if (hanako_card[j] == '\0') {
-        taro += 3;
-        break;
-      }
-    }
+    if (T == W)count++;
   }
-  printf("%d %d\n", taro, hanako);
+
+  printf("%d\n", count);
   return 0;
 }

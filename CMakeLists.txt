@@ -4,4 +4,4 @@ project(atcoder)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(atcoder 1_9/b.cpp)
+add_executable(atcoder 1_9/d.cpp)

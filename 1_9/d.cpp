@@ -10,8 +10,7 @@ int main() {
   string str, replace, cmd;
   int q, a, b;
 
-  cin >> str;
-  cin >> q;
+  cin >> str >> q;
 
   for (int i = 0; i < q; i++) {
     cin >> cmd >> a >> b;

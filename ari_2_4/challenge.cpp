@@ -11,9 +11,6 @@ using namespace std;
 // 補充量: Bi
 // 補充可能量: 無制限
 // 最小は何回補充が必要？無理なら-1
-
-
-// 深さ優先探索
 int solve1(int L, int P, int N, int A[4], int B[4]) {
   // ゴールを補給地点とする
   A[N] = L;

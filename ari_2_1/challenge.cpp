@@ -2,41 +2,11 @@
 
 using namespace std;
 
-void pattern1();
-
-void pattern2();
+void bfs();
 
 int main() {
-  pattern1();
-  pattern2();
+  bfs();
   return 0;
-}
-
-// 深さ優先探索
-bool select(vector<int> a, int index, int sum, int target) {
-  printf("%d\n", sum);
-  // 全パターン完了していたら判定！
-  if (a.size() == index) return sum == target;
-
-  // 使わない場合
-  if (select(a, index + 1, sum, target)) return true;
-
-  // 使う場合
-  if (select(a, index + 1, sum + a.at(index), target)) return true;
-
-  return false;
-}
-
-// 整数a1, a2, ..., an
-// いくつか選択、和 = k とできるかどうか
-// 1 <= n <= 20
-// -10**8 <= ai <= 10**8
-// -10**8 <= k <= 10**8
-void pattern1() {
-  //  int n = 4;
-  vector<int> a = {1, 2, 4, 7};
-  int k = 13;
-  printf("%s", select(a, 0, 0, k) ? "true" : "false");
 }
 
 // N × Mの迷路
@@ -47,7 +17,8 @@ int dy[4] = {0, 1, 0, -1};
 
 #include <queue>
 
-void pattern2() {
+void bfs() {
+
   // キューを定義
   queue<P> que;
   int N = 10;
@@ -110,5 +81,4 @@ void pattern2() {
       }
     }
   }
-
 }

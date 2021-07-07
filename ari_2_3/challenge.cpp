@@ -1,5 +1,9 @@
 #include <cstdio>
 #include <algorithm>
+#include <iostream>
+#include <ctime>
+
+using namespace std;
 
 void pattern1();
 
@@ -8,7 +12,7 @@ int main() {
   return 0;
 }
 
-// ■動的計画法
+// ■ 動的計画法
 // 重さ = wi
 // 価値 = vi
 // 個数 = n
@@ -80,12 +84,18 @@ void pattern1() {
 
   int W = 5;
 
+  clock_t start = clock();
   printf("%d\n", solve1(n, w, v, 0, W));
+  clock_t end = clock();     // 終了時間
+  cout << "duration = " << (double)(end - start) / CLOCKS_PER_SEC << "sec.\n";
 
   // メモ化テーブル
+  start = clock();
   int memo[5][100];
   memset(memo, -1, sizeof(memo));
   printf("%d\n", solve2(n, w, v, 0, W, memo));
+  end = clock();     // 終了時間
+  cout << "duration = " << (double)(end - start) / CLOCKS_PER_SEC << "sec.\n";
 
   // 漸化式を解決
   memset(memo, 0, sizeof(memo));

@@ -24,7 +24,7 @@ typedef pair<int, int> P;
 int maxCount = 0;
 
 // ■幅優先探索
-int solve(string pString[6]) {
+int solve() {
   queue<P> q;
 
   q.push(P(sx, sy));

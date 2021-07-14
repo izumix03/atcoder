@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 #include <set>
 #include <vector>
 
@@ -40,10 +39,10 @@ int solve(string answer) {
 }
 
 int main() {
-  cout << solve("YNYY") << endl;
-  cout << solve("YNNN") << endl;
-  cout << solve("NNNN") << endl;
-  cout << solve("YYYY") << endl;
-  cout << solve("NYNY") << endl;
+  cout << solve("YNYY") << endl; // 5
+  cout << solve("YNNN") << endl; // 8
+  cout << solve("NNNN") << endl; // 16
+  cout << solve("YYYY") << endl; // 1
+  cout << solve("NYNY") << endl; // 11
   return 0;
 }

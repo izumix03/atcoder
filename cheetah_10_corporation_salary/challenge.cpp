@@ -43,7 +43,7 @@ int main() {
       "YNYNNN",
       "YNNYNN"
   };
-  printf("%d\n", solve(relations1));
+  printf("%d\n", solve(relations1)); // 17
 
   string relations2[] = {
       "NYNNYN",
@@ -54,7 +54,7 @@ int main() {
       "NNNYYN"
   };
 
-  printf("%d\n", solve(relations2));
+  printf("%d\n", solve(relations2)); // 8
 
 
   string relations3[] = {
@@ -64,7 +64,23 @@ int main() {
       "NNNN",
   };
 
-  printf("%d\n", solve(relations3));
+  printf("%d\n", solve(relations3)); // 4
+
+
+  string relations4[] = {
+      "N",
+  };
+
+  printf("%d\n", solve(relations4)); // 1
+
+  string relations5[] = {
+      "NNYN",
+      "NNYN",
+      "NNNN",
+      "NYYN",
+  };
+
+  printf("%d\n", solve(relations5)); // 5
 
   return 0;
 }

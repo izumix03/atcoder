@@ -2,17 +2,6 @@
 
 using namespace std;
 
-int NORTH = 1;
-int SOUTH = -1;
-
-int EAST = 1;
-int WEST = -1;
-
-double solve(int n, int east, int west, int south, int north) {
-
-  //
-}
-
 bool grid[100][100] = {false};
 int vx[] = {1, -1, 0, 0};
 int vy[] = {0, 0, 1, -1};

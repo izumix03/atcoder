@@ -6,6 +6,7 @@ using namespace std;
 
 int arr[300000] = {-1};
 queue<int> q;
+
 /**
  * ☆理解できてない。。
  * A個: 0(0 ~ 100,000)
@@ -49,21 +50,62 @@ int solve(int a, int b, int k) {
   return arr[0];
 }
 
+int solve2(int a, int b, int k) {
+  if (a == 0) return 0;
+  if (a + b < k) return -1;
+
+  // 0の枚数の現在の最大値、最小値を格納。偶奇しかない
+  int minValue = a, maxValue = a;
+
+  for (int i = 0; i <= a + b; i++) {
+    int nextMinValue, nextMaxvalue;
+    // 可能な限り0→1とするようにする
+
+    if (minValue <= k & maxValue >= k) {
+      // 最大値と最小値の間にひっくり返せる枚数がある
+      if (minValue % 2 == k % 2) {
+        // 偶奇があえば、すべて1にできる
+        return i + 1;
+      } else {
+        // 偶奇が違えば、どうしても1枚0が残る
+        nextMinValue = 1;
+      }
+    } else {
+      // その他の場合は端だけ考える
+      nextMinValue = min(abs(k - minValue), abs(k - maxValue));
+    }
+
+    // 最大値を考える
+    if (minValue <= (a + b - k) && maxValue >= (a + b - k)) {
+      if ((a + b - maxValue) % 2 == k % 2) {
+        nextMaxvalue = a + b;
+      } else {
+        nextMaxvalue = a + b - 1;
+      }
+    } else {
+      nextMaxvalue = a + b - min(abs((a + b - k) - minValue), abs((a + b - k) - maxValue));
+    }
+    minValue = nextMinValue;
+    maxValue = nextMaxvalue;
+  }
+  return -1;
+}
+
 int main() {
   // A, B, K
-  cout << solve(3, 0, 3) << endl; // 1
+  cout << solve2(3, 0, 3) << endl; // 1
   cout << "answer, 1" << endl;
-  cout << solve(4, 0, 3) << endl; // 4
+  cout << solve2(4, 0, 3) << endl; // 4
   cout << "answer, 4" << endl;
-  cout << solve(4, 1, 3) << endl; // 2
+  cout << solve2(4, 1, 3) << endl; // 2
   cout << "answer, 2" << endl;
-  cout << solve(3, 2, 5) << endl; // -1
+  cout << solve2(3, 2, 5) << endl; // -1
   cout << "answer, -1" << endl;
-  cout << solve(100000, 100000, 578) << endl; // 174
+  cout << solve2(100000, 100000, 578) << endl; // 174
   cout << "answer, 174" << endl;
-  cout << solve(0, 0, 1) << endl; // 0
+  cout << solve2(0, 0, 1) << endl; // 0
   cout << "answer, 0" << endl;
-  cout << solve(4, 44, 50) << endl; // -1
+  cout << solve2(4, 44, 50) << endl; // -1
   cout << "answer, -1" << endl;
 
   return 0;

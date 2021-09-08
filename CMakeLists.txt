@@ -13,7 +13,11 @@ add_executable(ari_2_3 ari_2_3/challenge.cpp)
 add_executable(ari_2_4 ari_2_4/challenge.cpp)
 add_executable(ari_2_4_union_tree ari_2_4_union_tree/challenge.cpp)
 add_executable(cheetah_1_kiwi_juice cheetah_1_kiwi_juice/challenge.cpp)
+add_executable(cheetah_1_kiwi_juice2 cheetah_1_kiwi_juice/rechallenge.cpp)
+
 add_executable(cheetah_2_full_search cheetah_2_full_search/challenge.cpp)
+add_executable(cheetah_2_full_search2 cheetah_2_full_search/rechallenge.cpp)
+
 add_executable(cheetah_3_cryptography cheetah_3_cryptography/challenge.cpp)
 add_executable(cheetah_4_interesting_number cheetah_4_interesting_number/challenge.cpp)
 add_executable(cheetah_5_palindrome cheetah_5_palindrome/challenge.cpp)

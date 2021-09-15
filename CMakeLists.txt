@@ -19,7 +19,11 @@ add_executable(cheetah_2_full_search cheetah_2_full_search/challenge.cpp)
 add_executable(cheetah_2_full_search2 cheetah_2_full_search/rechallenge.cpp)
 
 add_executable(cheetah_3_cryptography cheetah_3_cryptography/challenge.cpp)
+add_executable(cheetah_3_cryptography2 cheetah_3_cryptography/rechallenge.cpp)
+
 add_executable(cheetah_4_interesting_number cheetah_4_interesting_number/challenge.cpp)
+add_executable(cheetah_4_interesting_number2 cheetah_4_interesting_number/rechallenge.cpp)
+
 add_executable(cheetah_5_palindrome cheetah_5_palindrome/challenge.cpp)
 add_executable(cheetah_6_friend_count cheetah_6_friend_count/challenge.cpp)
 add_executable(cheetah_7_broken_robot cheetah_7_broken_robot/challenge.cpp)

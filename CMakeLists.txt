@@ -25,6 +25,8 @@ add_executable(cheetah_4_interesting_number cheetah_4_interesting_number/challen
 add_executable(cheetah_4_interesting_number2 cheetah_4_interesting_number/rechallenge.cpp)
 
 add_executable(cheetah_5_palindrome cheetah_5_palindrome/challenge.cpp)
+add_executable(cheetah_5_palindrome2 cheetah_5_palindrome/rechallenge.cpp)
+
 add_executable(cheetah_6_friend_count cheetah_6_friend_count/challenge.cpp)
 add_executable(cheetah_7_broken_robot cheetah_7_broken_robot/challenge.cpp)
 add_executable(abc029_c abc029_c/challenge.cpp)

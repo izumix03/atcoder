@@ -28,6 +28,8 @@ add_executable(cheetah_5_palindrome cheetah_5_palindrome/challenge.cpp)
 add_executable(cheetah_5_palindrome2 cheetah_5_palindrome/rechallenge.cpp)
 
 add_executable(cheetah_6_friend_count cheetah_6_friend_count/challenge.cpp)
+add_executable(cheetah_6_friend_count2 cheetah_6_friend_count/rechallenge.cpp)
+
 add_executable(cheetah_7_broken_robot cheetah_7_broken_robot/challenge.cpp)
 add_executable(abc029_c abc029_c/challenge.cpp)
 add_executable(byak_01 byak_01/challenge.cpp)

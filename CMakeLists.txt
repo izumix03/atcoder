@@ -31,6 +31,8 @@ add_executable(cheetah_6_friend_count cheetah_6_friend_count/challenge.cpp)
 add_executable(cheetah_6_friend_count2 cheetah_6_friend_count/rechallenge.cpp)
 
 add_executable(cheetah_7_broken_robot cheetah_7_broken_robot/challenge.cpp)
+add_executable(cheetah_7_broken_robot2 cheetah_7_broken_robot/rechallenge.cpp)
+
 add_executable(abc029_c abc029_c/challenge.cpp)
 add_executable(byak_01 byak_01/challenge.cpp)
 add_executable(cheetah_8_maze_maker cheetah_8_maze_maker/challenge.cpp)

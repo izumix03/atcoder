@@ -18,6 +18,8 @@ double dfs(int x, int y, int n) {
   for (int i = 0; i < 4; i ++) {
     ret += dfs(x + vx[i], y + vy[i], n - 1) * prob[i];
   }
+
+  // 戻すために false にする
   grid[x][y] = false;
   return ret;
 }

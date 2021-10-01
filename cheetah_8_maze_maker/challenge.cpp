@@ -87,7 +87,7 @@ void set2() {
 
 int main() {
   set2();
-  printf("%d\n", solve(nullptr));
+  printf("%d\n", solve());
 
   return 0;
 }

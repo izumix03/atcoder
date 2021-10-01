@@ -34,8 +34,13 @@ add_executable(cheetah_7_broken_robot cheetah_7_broken_robot/challenge.cpp)
 add_executable(cheetah_7_broken_robot2 cheetah_7_broken_robot/rechallenge.cpp)
 
 add_executable(abc029_c abc029_c/challenge.cpp)
+
 add_executable(byak_01 byak_01/challenge.cpp)
+
 add_executable(cheetah_8_maze_maker cheetah_8_maze_maker/challenge.cpp)
+add_executable(cheetah_8_maze_maker2 cheetah_8_maze_maker/rechallenge.cpp)
+add_executable(cheetah_8_maze_maker3 cheetah_8_maze_maker/rechallenge2.cpp)
+
 add_executable(abc007_3 abc007_3/challenge.cpp)
 add_executable(cheetah_9_number_magic cheetah_9_number_magic/challenge.cpp)
 add_executable(cheetah_10_corporation_salary cheetah_10_corporation_salary/challenge.cpp)

@@ -42,7 +42,10 @@ add_executable(cheetah_8_maze_maker2 cheetah_8_maze_maker/rechallenge.cpp)
 add_executable(cheetah_8_maze_maker3 cheetah_8_maze_maker/rechallenge2.cpp)
 
 add_executable(abc007_3 abc007_3/challenge.cpp)
+
 add_executable(cheetah_9_number_magic cheetah_9_number_magic/challenge.cpp)
+add_executable(cheetah_9_number_magic2 cheetah_9_number_magic/rechallenge.cpp)
+
 add_executable(cheetah_10_corporation_salary cheetah_10_corporation_salary/challenge.cpp)
 add_executable(cheetah_11_bad_neighbors cheetah_11_bad_neighbors/challenge.cpp)
 add_executable(cheetah_12_king_and_knite cheetah_12_king_and_knite/challenge.cpp)

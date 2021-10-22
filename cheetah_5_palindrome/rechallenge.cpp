@@ -7,20 +7,20 @@ using namespace std;
 // 違ったら 0 番目を末尾に入れてチェック
 // 違ったら 1 番目を末尾に入れて index = 1 からチェック
 // ...
-int solve(string s) {
-  int maxLen = s.length() * 2 - 1;
+void solve(string input, vector<int> vector) {
+  int maxLen = input.length() * 2 - 1;
 
   // 文字増やす
   for (int i = 0; i < maxLen; i++) {
     // チェックする
     bool result = true;
-    for (int j = 0; i + j < s.length() - 1 - j; j++) {
-      if (s[j + i] != s[s.length() - 1 - j]) {
+    for (int j = 0; i + j < input.length() - 1 - j; j++) {
+      if (input[j + i] != input[input.length() - 1 - j]) {
         result = false;
         break;
       }
     }
-    if (result) return s.length() + i;
+    if (result) return input.length() + i;
   }
 
   return maxLen;
@@ -43,8 +43,8 @@ int answer(string s) {
 // 回分を最短で作る
 // string s: 1-50文字
 int main() {
-  cout << solve("abab") << endl; // 5
-  cout << solve("abacaba") << endl; // 7
-  cout << solve("qwerty") << endl; // 11
-  cout << solve("abdfhdyrbdbsdfghjkllkjhgfds") << endl; // 27 -> 38
+  cout << solve("abab", vector<int>()) << endl; // 5
+  cout << solve("abacaba", vector<int>()) << endl; // 7
+  cout << solve("qwerty", vector<int>()) << endl; // 11
+  cout << solve("abdfhdyrbdbsdfghjkllkjhgfds", vector<int>()) << endl; // 27 -> 38
 }

@@ -50,6 +50,8 @@ add_executable(cheetah_10_corporation_salary cheetah_10_corporation_salary/chall
 add_executable(cheetah_10_corporation_salary2 cheetah_10_corporation_salary/rechallenge.cpp)
 
 add_executable(cheetah_11_bad_neighbors cheetah_11_bad_neighbors/challenge.cpp)
+add_executable(cheetah_11_bad_neighbors2 cheetah_11_bad_neighbors/rechallenge.cpp)
+
 add_executable(cheetah_12_king_and_knite cheetah_12_king_and_knite/challenge.cpp)
 add_executable(cheetah_14_colorful_boxes_and_balls cheetah_14_colorful_boxes_and_balls/challenge.cpp)
 add_executable(cheetah_15_stock_history cheetah_15_stock_history/challenge.cpp)
@@ -58,3 +60,6 @@ add_executable(cheetah_17_circles_country cheetah_17_circles_country/challenge.c
 add_executable(cheetah_18_hamilton_path cheetah_18_hamilton_path/challenge.cpp)
 add_executable(cheetah_19_binary_flips cheetah_19_binary_flips/challenge.cpp)
 add_executable(cheetah_20_cut_sticks cheetah_20_cut_sticks/challenge.cpp)
+
+add_executable(practice practice/solve.cpp)
+add_executable(practice2 practice2/solve.cpp)

@@ -17,13 +17,13 @@ set<int> cards[] = {{1, 2, 3, 4, 5, 6,  7,  8},
                     {1, 2, 5, 6, 9, 10, 13, 14},
                     {1, 3, 5, 7, 9, 11, 13, 15}};
 
-int solve(string answer) {
+void solve(string input, vector<int> vector) {
   vector<int> all = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 
   for (int i = 0; i < 4; i++) {
     vector<int> ans = {};
 
-    if (answer[i] == 'Y') {
+    if (input[i] == 'Y') {
       set_intersection(all.begin(), all.end(),
                        cards[i].begin(), cards[i].end(),
                        inserter(ans, ans.end()));
@@ -39,10 +39,10 @@ int solve(string answer) {
 }
 
 int main() {
-  cout << solve("YNYY") << endl; // 5
-  cout << solve("YNNN") << endl; // 8
-  cout << solve("NNNN") << endl; // 16
-  cout << solve("YYYY") << endl; // 1
-  cout << solve("NYNY") << endl; // 11
+  cout << solve("YNYY", vector<int>()) << endl; // 5
+  cout << solve("YNNN", vector<int>()) << endl; // 8
+  cout << solve("NNNN", vector<int>()) << endl; // 16
+  cout << solve("YYYY", vector<int>()) << endl; // 1
+  cout << solve("NYNY", vector<int>()) << endl; // 11
   return 0;
 }

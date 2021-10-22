@@ -19,10 +19,10 @@ vector<int> cards[] = {
     {1, 3, 5, 7, 9, 11, 13, 15}
 };
 
-int solve(string answer) {
+void solve(string input, vector<int> vector) {
   vector<int> result = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
-  for (int i = 0; i < answer.size(); i++) {
-    if (answer[i] == 'Y') {
+  for (int i = 0; i < input.size(); i++) {
+    if (input[i] == 'Y') {
       // 積集合
       set_intersection(
           result.begin(),
@@ -44,10 +44,10 @@ int solve(string answer) {
 }
 
 int main() {
-  cout << solve("YNYY") << endl; // 5
-  cout << solve("YNNN") << endl; // 8
-  cout << solve("NNNN") << endl; // 16
-  cout << solve("YYYY") << endl; // 1
-  cout << solve("NYNY") << endl; // 11
+  cout << solve("YNYY", vector<int>()) << endl; // 5
+  cout << solve("YNNN", vector<int>()) << endl; // 8
+  cout << solve("NNNN", vector<int>()) << endl; // 16
+  cout << solve("YYYY", vector<int>()) << endl; // 1
+  cout << solve("NYNY", vector<int>()) << endl; // 11
   return 0;
 }

@@ -35,6 +35,8 @@ add_executable(cheetah_7_broken_robot2 cheetah_7_broken_robot/rechallenge.cpp)
 
 add_executable(abc029_c abc029_c/challenge.cpp)
 
+add_executable(abc223_d abc223_d/solve.cpp)
+
 add_executable(byak_01 byak_01/challenge.cpp)
 
 add_executable(cheetah_8_maze_maker cheetah_8_maze_maker/challenge.cpp)
@@ -61,5 +63,4 @@ add_executable(cheetah_18_hamilton_path cheetah_18_hamilton_path/challenge.cpp)
 add_executable(cheetah_19_binary_flips cheetah_19_binary_flips/challenge.cpp)
 add_executable(cheetah_20_cut_sticks cheetah_20_cut_sticks/challenge.cpp)
 
-add_executable(practice practice/solve.cpp)
-add_executable(practice2 practice2/solve.cpp)
+

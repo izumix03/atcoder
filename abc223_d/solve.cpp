@@ -1,34 +1,95 @@
 #include <iostream>
+#include <utility>
+#include <vector>
+#include <string>
 
 using namespace std;
+typedef pair<char, char> P;
+
+vector<string> junretsu(string a) {
+  // 組み合わせを作る
+  if (a.size() == 1) {
+    return {a};
+  }
+  vector<string> kouho;
+  for (int i = 0; i < a.size(); i++) {
+    string copyA = a;
+    char tmp = copyA[i];
+    // i を 消して
+    string ss = copyA.erase(i, 1);
+    vector<string> sub = junretsu(ss);
+    for (const auto &s: sub) {
+      kouho.push_back(tmp + s);
+    }
+  }
+  return kouho;
+}
+
+string solve(string a, const vector<P> &p) {
+  // 組み合わせを作る
+  vector<string> kouho = junretsu(std::move(a));
+
+  // 条件でフィルタリングする
+  vector<string> filtered;
+  for (const auto &k: kouho) {
+    bool t = true;
+    for (auto condition: p) {
+      if (k.find(condition.first) > k.find(condition.second)) {
+        t = false;
+        break;
+      }
+    }
+    if (t) filtered.push_back(k);
+  }
+
+  // ソートする
+  sort(filtered.begin(), filtered.end());
+  if (filtered.empty()) {
+    return "-1";
+  }
+  return filtered[0];
+}
 
 int main() {
   string strN;
-  std::getline(std::cin, strN);
-  int n = std::stoi(strN);
+  cin >> strN;
 
-  vector<int> a;
-  vector<int> b;
-  for (int i = 0; i < n * 2; i++) {
-    string tmp;
+//  int n = std::stoi(strN);
+
+  string strM;
+  cin >> strM;
+  int m = stoi(strM);
+
+  vector<char> a; // 使える数字
+
+  for (int i = 0; i < m * 2; i++) {
+    char tmp;
     cin >> tmp;
 
-    int tmpN = std::stoi(tmp);
-    if (i % 2 == 0) {
-      a.push_back(tmpN);
-    } else {
-      b.push_back(tmpN);
-    }
+    a.push_back(tmp);
   }
-  solve(a, b);
+  vector<P> p;
+  for (int i = 0; i < a.size(); i += 2) {
+    p.emplace_back(P(a[i], a[i + 1]));
+  }
+
+  sort(a.begin(), a.end());
+  a.erase(unique(a.begin(), a.end()), a.end());
+
+  string s(a.begin(), a.end());
+  cout << solve(s, p) << endl;
   return 0;
 }
 
 /**
- * N 本の導火線を一直線に接着したものがあります。
- * 左から i 本目の導火線は長さが A i cm で、 1 秒あたり B i cm 燃えます。
- * この導火線の左端と右端から同時に火をつけるとき、
- * 2 つの火がぶつかる場所が着火前の導火線の左端から何 cm の地点か求めてください。
+ * 1.2...N
+ * 数列P
+ * 辞書順で最小を返せ、なければ-1
+
+ * 最大 N
+ * 条件は M 個
+ *
+ * i = 1...Mで Pで AiはBiより先にくる
  */
 
 /**

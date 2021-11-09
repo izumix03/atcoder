@@ -36,6 +36,7 @@ add_executable(cheetah_7_broken_robot2 cheetah_7_broken_robot/rechallenge.cpp)
 add_executable(abc029_c abc029_c/challenge.cpp)
 
 add_executable(abc223_d abc223_d/solve.cpp)
+add_executable(abc223_d_ans abc223_d_ans/solve.cpp)
 
 add_executable(byak_01 byak_01/challenge.cpp)
 

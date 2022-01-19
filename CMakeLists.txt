@@ -63,5 +63,9 @@ add_executable(cheetah_17_circles_country cheetah_17_circles_country/challenge.c
 add_executable(cheetah_18_hamilton_path cheetah_18_hamilton_path/challenge.cpp)
 add_executable(cheetah_19_binary_flips cheetah_19_binary_flips/challenge.cpp)
 add_executable(cheetah_20_cut_sticks cheetah_20_cut_sticks/challenge.cpp)
+add_executable(atc001 atc001/challenge.cpp)
+add_executable(arc031 arc031/challenge.cpp)
+add_executable(arc037_b arc037_b/union_find.cpp)
+add_executable(aoj1160_b aoj1160_b/challenge.cpp)
 
 

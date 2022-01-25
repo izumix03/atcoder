@@ -44,8 +44,6 @@ add_executable(cheetah_8_maze_maker cheetah_8_maze_maker/challenge.cpp)
 add_executable(cheetah_8_maze_maker2 cheetah_8_maze_maker/rechallenge.cpp)
 add_executable(cheetah_8_maze_maker3 cheetah_8_maze_maker/rechallenge2.cpp)
 
-add_executable(abc007_3 abc007_3/challenge.cpp)
-
 add_executable(cheetah_9_number_magic cheetah_9_number_magic/challenge.cpp)
 add_executable(cheetah_9_number_magic2 cheetah_9_number_magic/rechallenge.cpp)
 
@@ -67,5 +65,8 @@ add_executable(atc001 atc001/challenge.cpp)
 add_executable(arc031 arc031/challenge.cpp)
 add_executable(arc037_b arc037_b/union_find.cpp)
 add_executable(aoj1160_b aoj1160_b/challenge.cpp)
+
+add_executable(abc007_3 abc007_3/challenge2.cpp)
+add_executable(joi2011yo_e joi2011yo_e/challenge.cpp)
 
 

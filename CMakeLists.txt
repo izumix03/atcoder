@@ -68,5 +68,6 @@ add_executable(aoj1160_b aoj1160_b/challenge.cpp)
 
 add_executable(abc007_3 abc007_3/challenge2.cpp)
 add_executable(joi2011yo_e joi2011yo_e/challenge.cpp)
+add_executable(abc088_D abc088_D/challenge.cpp)
 
 

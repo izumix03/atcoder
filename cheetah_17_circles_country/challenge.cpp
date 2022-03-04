@@ -36,7 +36,7 @@ int solve(vector<int> x, vector<int> y, vector<int> R, int x1, int y1, int x2, i
   return num;
 }
 
-int main() {
+void main() {
   cout << solve({0}, {0}, {2}, -5, 1, 5, 1) << endl; // 0
   cout << solve({0, -6, 6}, {0, 1, 2}, {2, 2, 2}, -5, 1, 5, 1) << endl; // 2
   cout << solve({1, -3, 2, 5, -4, 12, 12}, {1, -1, 2, 5, 5, 1, 1}, {8, 1, 2, 1, 1, 1, 2}, -5, 1, 12, 1) << endl; // 3

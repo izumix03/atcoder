@@ -39,7 +39,7 @@ long long solve(int size, P start, P end, int numMove) {
   return ways[end.second][end.first][numMove];
 }
 
-int main() {
+void main() {
   cout << solve(3, P{0, 0}, P{1, 0}, 1) << endl; // 1
   cout << solve(3, P{0, 0}, P{1, 2}, 1) << endl; // 1
   cout << solve(3, P{0, 0}, P{2, 2}, 1) << endl; // 0

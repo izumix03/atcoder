@@ -76,7 +76,7 @@ int solve(int ini, int month, vector<string> prices) {
   return (int) round(profit);
 }
 
-int main() {
+void main() {
   vector<string> prices = {"10 20 30", "15 24 32"};
   cout << solve(1000, 0, prices) << endl; // 500
 

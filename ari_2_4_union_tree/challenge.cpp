@@ -106,7 +106,7 @@ void solve1() {
   printf("%d\n", ans);
 }
 
-int main() {
+void main() {
   solve1();
   return 0;
 }

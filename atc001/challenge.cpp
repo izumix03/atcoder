@@ -33,7 +33,7 @@ void dfs(long long x, long long y) {
   if (ok) return;
 }
 
-int main() {
+void main() {
   cin >> h >> w;
 
   long long sy = 0, sx = 0;

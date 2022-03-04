@@ -47,7 +47,7 @@ string solve(string a, const vector<P> &p) {
   return kouho[0];
 }
 
-int main() {
+void main() {
   string strN;
   cin >> strN;
 

@@ -54,7 +54,7 @@ int answer(vector<int> donations) {
   return ans;
 }
 
-int main() {
+void main() {
   vector<int> donations1 = {10, 3, 2, 5, 7, 8};
   cout << solve(donations1, 0, 0, false) << endl; // 19
   cout << answer(donations1) << endl; // 19

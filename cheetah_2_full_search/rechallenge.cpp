@@ -32,7 +32,7 @@ int solve(const vector<string> &first, const vector<string> &second) {
 }
 
 
-int main() {
+void main() {
   cout << solve(
       {"fishing", "gardening", "swimming", "fishing"},
       {"hunting", "fishing", "fishing", "biting"}) << endl; // 4
@@ -43,10 +43,10 @@ int main() {
       {"snake", "programming", "cobra", "monty"},
       {"python", "python", "anaconda", "python"}) << endl; // 3
   cout << solve(
-      {"t", "o", "p", "c", "o", "d", "e", "r", "s", "i", "n", "g", "l",
-       "e", "r", "o", "u", "n", "d", "m", "a", "t", "c", "h", "f", "o",
+      {"cnt", "o", "p", "c", "o", "d", "e", "r", "s", "i", "n", "g", "l",
+       "e", "r", "o", "u", "n", "d", "m", "a", "cnt", "c", "h", "f", "o",
        "u", "r", "n", "i"},
       {"n", "e", "f", "o", "u", "r", "j", "a", "n", "u", "a", "r", "y",
-       "t", "w", "e", "n", "t", "y", "t", "w", "o", "s", "a", "t", "u",
+       "cnt", "w", "e", "n", "cnt", "y", "cnt", "w", "o", "s", "a", "cnt", "u",
        "r", "d", "a", "y"}) << endl; // 6
 }

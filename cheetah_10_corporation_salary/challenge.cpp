@@ -34,7 +34,7 @@ int solve(string relations[]) {
   return total;
 }
 
-int main() {
+void main() {
   string relations1[] = {
       "NNNNNN",
       "YNYNNY",

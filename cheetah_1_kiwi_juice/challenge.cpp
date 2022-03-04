@@ -28,7 +28,7 @@ void solve1() {
   }
 }
 
-int main() {
+void main() {
   solve1();
   return 0;
 }

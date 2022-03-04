@@ -43,7 +43,7 @@ void solve(string input, vector<int> vector) {
   return result[0];
 }
 
-int main() {
+void main() {
   cout << solve("YNYY", vector<int>()) << endl; // 5
   cout << solve("YNNN", vector<int>()) << endl; // 8
   cout << solve("NNNN", vector<int>()) << endl; // 16

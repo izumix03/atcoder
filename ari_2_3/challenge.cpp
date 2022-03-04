@@ -7,7 +7,7 @@ using namespace std;
 
 void pattern1();
 
-int main() {
+void main() {
   pattern1();
   return 0;
 }
@@ -16,10 +16,10 @@ int main() {
 // 重さ = wi
 // 価値 = vi
 // 個数 = n
-// 重さの総和が W 以下になるようにして「価値を最大化」
+// 重さの総和が M 以下になるようにして「価値を最大化」
 // 1 <= n <= 100
 // 1 <= wi, vi <= 100
-// 1 <= W <= 10000
+// 1 <= M <= 10000
 
 
 // 深さ優先探索

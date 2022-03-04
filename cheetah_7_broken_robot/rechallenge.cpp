@@ -31,7 +31,7 @@ double solve(int n, int east, int west, int south, int north) {
   return saiki(n, rate, 50, 50);
 }
 
-int main() {
+void main() {
   cout << solve(1, 25, 25, 25, 25) << endl; // 1.0
   cout << solve(2, 25, 25, 25, 25) << endl; // 0.75
   cout << solve(7, 50, 0, 0, 50) << endl; // 1.0

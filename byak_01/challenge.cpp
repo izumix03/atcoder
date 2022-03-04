@@ -10,7 +10,7 @@ int memo[100][100];
  * 部分和問題
  * N個の正の整数a0,a1,...,aN－1と正の整数Wが与えられます．
  * a0,a1,...,aN－1の中から何個かの整数を選んで総和をWとすることができるかどうかを判定してください．
- * たとえばN＝5,W＝10,a＝{1,2,4,5,11}の場合には，a0＋a2＋a3＝1＋4＋5＝10ですから“Yes”となります
+ * たとえばN＝5,M＝10,a＝{1,2,4,5,11}の場合には，a0＋a2＋a3＝1＋4＋5＝10ですから“Yes”となります
  * @return
  */
 bool dfs(const vector<int> &a, int index, int sum, int w) {
@@ -51,7 +51,7 @@ void solve(const vector<int> &a, int w) {
   cout << "duration = " << (double) (end - start) / CLOCKS_PER_SEC << "sec.\n";
 }
 
-int main() {
+void main() {
   solve({1, 2, 4, 5, 11}, 10);
   solve({1, 5, 8, 11}, 10);
   return 0;

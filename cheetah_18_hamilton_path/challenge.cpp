@@ -89,7 +89,7 @@ int solve(vector<string> roads) {
   return int(sum);
 }
 
-int main() {
+void main() {
   cout << solve({"NYN", "YNN", "NNN"}) << endl; // 4
   cout << solve({"NYYY", "YNNN", "YNNN", "YNNN"}) << endl; // 0
   cout << solve({"NYY", "YNY", "YYN"}) << endl; // 0

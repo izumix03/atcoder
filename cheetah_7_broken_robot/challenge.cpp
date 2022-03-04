@@ -33,7 +33,7 @@ double answer(int n, int east, int west, int south, int north) {
   return dfs(50, 50, n);
 }
 
-int main() {
+void main() {
 //  printf("%d\n", solve(1, 25, 25, 25, 25)); // 1.0
   printf("%f\n", answer(2, 25, 25, 25, 25)); // 0.75
 //  printf("%d\n",solve(7, 50, 0, 0, 50)); // 1.0

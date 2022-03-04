@@ -38,7 +38,7 @@ void solve(vector<int> capacities,
   cout << endl;
 }
 
-int main() {
+void main() {
   solve({20, 20}, {5, 8}, {0}, {1}); // 0, 13
   solve({10, 10}, {5, 8}, {0}, {1}); // 3, 10
   solve({30, 20, 10}, {10, 5, 5}, {0, 1, 2}, {1, 2, 0}); // 10, 10, 0

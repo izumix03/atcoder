@@ -34,7 +34,7 @@ vector<int> topological_sort(vector<vector<int>> &graph, vector<int> &indegree, 
   return sorted_vertices;
 }
 
-int main() {
+void main() {
   int verticesCnt, edgeCnt;
   cin >> verticesCnt >> edgeCnt;
 

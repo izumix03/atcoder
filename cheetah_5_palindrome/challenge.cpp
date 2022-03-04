@@ -70,7 +70,7 @@ void answer(char *s) {
 }
 
 
-int main() {
+void main() {
 //  solve("abab"); // 5: ababa
 //  solve("abacaba"); // 7: abacaba
 //  solve("qwerty"); // 11: qwertytrewq

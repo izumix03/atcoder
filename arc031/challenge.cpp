@@ -48,7 +48,7 @@ bool check() {
   return true;
 }
 
-int main() {
+void main() {
   for (int i = 0; i < 10; i++) {
     for (int j = 0; j < 10; j++) {
       cin >> input[i][j];

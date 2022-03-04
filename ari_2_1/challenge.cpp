@@ -4,7 +4,7 @@ using namespace std;
 
 void bfs();
 
-int main() {
+void main() {
   bfs();
   return 0;
 }

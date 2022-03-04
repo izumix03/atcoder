@@ -7,10 +7,10 @@ using namespace std;
 #define INF 10000000
 
 char maze[MAX_N][MAX_N];
-int steps[MAX_N][MAX_N];
+int visited[MAX_N][MAX_N];
 /**
  * https://atcoder.jp/contests/arc005/tasks/arc005_3
- * 縦 H、横 W
+ * 縦 N、横 M
  * 2回まで無視できる
  * いけるなら YES だめなら NO
  * s: 家
@@ -19,7 +19,7 @@ int steps[MAX_N][MAX_N];
  * #: 塀
  */
 
-int H, W;
+int N, M;
 typedef pair<int, int> P;
 int dy[4] = {0, 1, 0, -1};
 int dx[4] = {1, 0, -1, 0};
@@ -27,14 +27,14 @@ int dx[4] = {1, 0, -1, 0};
 queue<P> q;
 
 void input() {
-  cin >> H >> W;
-  for (int i = 0; i < H; i++) {
-    for (int j = 0; j < W; j++) {
+  cin >> N >> M;
+  for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
       cin >> maze[i][j];
       if (maze[i][j] == 's') {
         q.push(P(i, j));
       }
-      steps[i][j] = -1;
+      visited[i][j] = -1;
     }
   }
 }
@@ -53,15 +53,15 @@ void solve() {
         return;
       }
 
-      if (0 <= ny && ny < H
-          && 0 <= nx && nx < W
-          && (steps[p.first][p.second] < 2 || maze[ny][nx] == '.')
+      if (0 <= ny && ny < N
+          && 0 <= nx && nx < M
+          && (visited[p.first][p.second] < 2 || maze[ny][nx] == '.')
         ) {
         int val = maze[ny][nx] == '#' ? 1 : 0;
-        int step = max(steps[p.first][p.second], 0) + val;
-        if (steps[ny][nx] == -1 || steps[ny][nx] > step) {
+        int step = max(visited[p.first][p.second], 0) + val;
+        if (visited[ny][nx] == -1 || visited[ny][nx] > step) {
           q.push(P(ny, nx));
-          steps[ny][nx] = step;
+          visited[ny][nx] = step;
         }
       }
     }
@@ -70,7 +70,7 @@ void solve() {
   cout << "NO" << endl;
 }
 
-int main() {
+void main() {
   input();
   solve();
   return 0;

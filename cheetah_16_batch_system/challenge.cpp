@@ -100,7 +100,7 @@ void answer(vector<int> duration, vector<string> user) {
 }
 
 
-int main() {
+void main() {
   solve({400, 100, 100, 100}, {"Danny Messer", "Stella Bonasera", "Stella Bonasera", "Mac Taylor"}); // {3, 1, 2 , 0}
   solve({200, 200, 200}, {"Gil", "Sarah", "Warrick"}); // {0, 1, 2}
   solve({100, 200, 50}, {"Horatio Caine", "horatio caine", "YEAAAAAAH"}); // {2, 0, 1}

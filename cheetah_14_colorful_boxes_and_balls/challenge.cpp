@@ -37,7 +37,7 @@ int solve(int numR, int numB, int R, int B, int both) {
   return (both * 2 * min(numR, numB)) + (max(R, B) * abs(numR - numB));
 }
 
-int main() {
+void main() {
   cout << solve(2, 3, 100, 400, 200) << endl; // 1400
   cout << solve(2, 3, 100, 400, 300) << endl; // 1600
   cout << solve(5, 5, 464, 464, 464) << endl; // 4640

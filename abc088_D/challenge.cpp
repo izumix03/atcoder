@@ -7,10 +7,10 @@ using namespace std;
 typedef pair<int, int> P;
 #define INF 1000000
 
-int H, W;
+int N, M;
 
 char maze[MAX_N][MAX_N];
-int steps[MAX_N][MAX_N];
+int visited[MAX_N][MAX_N];
 
 int dy[4] = {0, 1, 0, -1};
 int dx[4] = {1, 0, -1, 0};
@@ -18,19 +18,19 @@ int cnt = 0;
 
 /**
  * https://atcoder.jp/contests/abc088/tasks/abc088_d
- * 縦 H、横 W
+ * 縦 N、横 M
  * (1, 1) からスタート
  * 上下左右のみ
  * 白いマスだけ通れる .
  * 黒に変える数が点数 #
  */
 void input() {
-  cin >> H >> W;
-  for (int i = 0; i < H; i++) {
-    for (int j = 0; j < W; j++) {
+  cin >> N >> M;
+  for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
       cin >> maze[i][j];
       if (maze[i][j] == '#') cnt++;
-      steps[i][j] = INF;
+      visited[i][j] = INF;
     }
   }
 }
@@ -38,14 +38,14 @@ void input() {
 void solve() {
   queue<P> q;
   q.push(P(0, 0));
-  steps[0][0] = 1; // 黒じゃないので
+  visited[0][0] = 1; // 黒じゃないので
 
   while (!q.empty()) {
     P p = q.front();
     q.pop();
 
-    if (p.first == H - 1 && p.second == W - 1) {
-      cout << H * W - steps[p.first][p.second] - cnt << endl;
+    if (p.first == N - 1 && p.second == M - 1) {
+      cout << N * M - visited[p.first][p.second] - cnt << endl;
       return;
     }
 
@@ -53,19 +53,19 @@ void solve() {
       int ny = p.first + dy[i];
       int nx = p.second + dx[i];
 
-      if (0 <= ny && ny < H
-          && 0 <= nx && nx < W
+      if (0 <= ny && ny < N
+          && 0 <= nx && nx < M
           && maze[ny][nx] != '#'
-          && steps[ny][nx] == INF) {
+          && visited[ny][nx] == INF) {
         q.push(P(ny, nx));
-        steps[ny][nx] = steps[p.first][p.second] + 1;
+        visited[ny][nx] = visited[p.first][p.second] + 1;
       }
     }
   }
   cout << -1 << endl;
 }
 
-int main() {
+void main() {
   input();
   solve();
   return 0;

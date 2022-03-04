@@ -60,7 +60,7 @@ void input() {
   }
 }
 
-int main() {
+void main() {
   input();
   solve();
   return 0;

@@ -41,7 +41,7 @@ int solve1(int L, int P, int N, int A[4], int B[4]) {
   return ans;
 }
 
-int main() {
+void main() {
   int L = 25;
   int P = 10;
 

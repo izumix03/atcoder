@@ -15,8 +15,8 @@ using namespace std;
  * 最短時間を求めよ、食べる時間は無視
  */
 
-// 1 <= H <= 1000
-// 1 <= W <= 1000
+// 1 <= N <= 1000
+// 1 <= M <= 1000
 // 1 <= N <= 9
 
 #define MAX_N 1000
@@ -24,19 +24,19 @@ using namespace std;
 
 typedef pair<int, int> P;
 
-int H, W, N;
+int N, M, N;
 
 // s = 巣、x = 障害、. = 空き地、1-9 = チーズ工場
 char map[MAX_N][MAX_N];
-int steps[MAX_N][MAX_N];
+int visited[MAX_N][MAX_N];
 
 void input() {
-  cin >> H >> W >> N;
+  cin >> N >> M >> N;
 
-  for (int i = 0; i < H; i++) {
-    for (int j = 0; j < W; j++) {
+  for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
       cin >> map[i][j];
-      steps[i][j] = INF;
+      visited[i][j] = INF;
     }
   }
 }
@@ -50,7 +50,7 @@ P goNext(int y, int x, int I) {
   bool done[MAX_N][MAX_N] = {false};
 
   q.push(P(y, x));
-  if (steps[y][x] == INF) steps[y][x] = 0;
+  if (visited[y][x] == INF) visited[y][x] = 0;
 
   while (!q.empty()) {
     P p = q.front();
@@ -64,12 +64,12 @@ P goNext(int y, int x, int I) {
       int ny = p.first + dy[i];
       int nx = p.second + dx[i];
 
-      if (0 <= ny && ny < H
-          && 0 <= nx && nx < W
+      if (0 <= ny && ny < N
+          && 0 <= nx && nx < M
           && map[ny][nx] != 'X'
           && !done[ny][nx]) {
         q.push(P(ny, nx));
-        steps[ny][nx] = steps[p.first][p.second] + 1;
+        visited[ny][nx] = visited[p.first][p.second] + 1;
         done[ny][nx] = true;
       }
     }
@@ -79,8 +79,8 @@ P goNext(int y, int x, int I) {
 void solve() {
 
   int y = -1, x;
-  for (int i = 0; i < H; i++) {
-    for (int j = 0; j < W; j++) {
+  for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
       if (map[i][j] == 'S') {
         y = i;
         x = j;
@@ -94,10 +94,10 @@ void solve() {
     p = goNext(p.first, p.second, i);
   }
 
-  cout << steps[p.first][p.second] << endl;
+  cout << visited[p.first][p.second] << endl;
 }
 
-int main() {
+void main() {
   input();
   solve();
   return 0;

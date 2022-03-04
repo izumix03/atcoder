@@ -91,7 +91,7 @@ int solve2(int a, int b, int k) {
   return -1;
 }
 
-int main() {
+void main() {
   // A, B, K
   cout << solve2(3, 0, 3) << endl; // 1
   cout << "answer, 1" << endl;

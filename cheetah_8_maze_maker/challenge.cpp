@@ -6,7 +6,7 @@
 using namespace std;
 
 int maze[50][50];
-int steps[50][50];
+int visited[50][50];
 
 int maxX;
 int maxY;
@@ -28,7 +28,7 @@ int solve() {
   queue<P> q;
 
   q.push(P(sx, sy));
-  steps[sy][sx] = 0;
+  visited[sy][sx] = 0;
 
   while (!q.empty()) {
     P p = q.front();
@@ -42,9 +42,9 @@ int solve() {
       if (0 <= nextX && nextX < maxX &&
           0 <= nextY && nextY < maxY &&
           maze[nextY][nextX] != 0 &&
-          steps[nextY][nextX] == INF) {
+          visited[nextY][nextX] == INF) {
         q.push(P(nextX, nextY));
-        maxCount = max(steps[nextY][nextX] = steps[p.second][p.first] + 1, maxCount);
+        maxCount = max(visited[nextY][nextX] = visited[p.second][p.first] + 1, maxCount);
       }
     }
   }
@@ -72,7 +72,7 @@ void set2() {
       } else {
         maze[i][j] = 0;
       }
-      steps[i][j] = INF;
+      visited[i][j] = INF;
     }
   }
 
@@ -85,7 +85,7 @@ void set2() {
   }
 }
 
-int main() {
+void main() {
   set2();
   printf("%d\n", solve());
 

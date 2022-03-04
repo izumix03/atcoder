@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int main() {
+void main() {
   string str, replace, cmd;
   int q, a, b;
 

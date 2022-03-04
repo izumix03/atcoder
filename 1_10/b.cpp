@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main() {
+void main() {
   double a, b, degree;
 
   scanf("%lf %lf %lf", &a, &b, &degree);

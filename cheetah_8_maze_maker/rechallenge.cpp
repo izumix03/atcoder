@@ -68,7 +68,7 @@ int solve(const vector<string> &maze, int sy, int sx, vector<int> moveY, vector<
  * 最大超約数を返せ
  * @return
  */
-int main() {
+void main() {
   cout << solve({"...",
                  "...",
                  "..."},

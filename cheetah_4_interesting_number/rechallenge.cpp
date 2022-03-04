@@ -39,7 +39,7 @@ void solve(int base) {
 }
 
 
-int main() {
+void main() {
   solve(10); // {3, 9}
   solve(3); // {2}
   solve(9); // {2, 4, 8}

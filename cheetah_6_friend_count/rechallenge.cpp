@@ -33,7 +33,7 @@ int solve(vector<string> s) {
   return result;
 }
 
-int main() {
+void main() {
   cout << solve({"NNN", "NNN", "NNN"}) << endl; // 0
   cout << solve({"NYY", "YNY", "YYN"}) << endl; // 2
   cout << solve({"NYNNN", "YNYNN", "NYNYN", "NNYNY", "NNNYN"}) << endl; // 4

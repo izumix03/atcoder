@@ -1,6 +1,6 @@
 void pattern1();
 
-int main() {
+void main() {
   pattern1();
   return 0;
 }

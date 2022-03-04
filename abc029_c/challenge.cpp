@@ -17,7 +17,7 @@ string print(int n, string r) {
   return "";
 }
 
-int main() {
+void main() {
   int n;
   cin >> n;
   print(n, "");

@@ -42,7 +42,7 @@ int answer(string s) {
 
 // 回分を最短で作る
 // string s: 1-50文字
-int main() {
+void main() {
   cout << solve("abab", vector<int>()) << endl; // 5
   cout << solve("abacaba", vector<int>()) << endl; // 7
   cout << solve("qwerty", vector<int>()) << endl; // 11

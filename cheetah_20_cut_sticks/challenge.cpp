@@ -79,7 +79,7 @@ double solve(const vector<int>& sticks, int c, int k) {
   return low;
 }
 
-int main() {
+void main() {
   // A, B, K
   cout<< solve({5, 8}, 1, 1) << endl; // 8.0
   cout << "answer, 8.0" << endl;

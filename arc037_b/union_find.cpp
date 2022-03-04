@@ -94,7 +94,7 @@ void solve() {
   cout << tree.size() << endl;
 }
 
-int main() {
+void main() {
   input();
   solve();
   return 0;

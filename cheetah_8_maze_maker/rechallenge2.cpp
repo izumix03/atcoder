@@ -78,7 +78,7 @@ int solve(const vector<string> &maze, // [Row][Col]
  * 最大移動数を返せ
  * @return
  */
-int main() {
+void main() {
   cout << solve({"...",
                  "...",
                  "..."},

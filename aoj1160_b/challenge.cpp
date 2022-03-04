@@ -63,7 +63,7 @@ void input() {
   }
 }
 
-int main() {
+void main() {
   input();
   return 0;
 }

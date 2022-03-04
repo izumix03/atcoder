@@ -45,7 +45,7 @@ int solve(const vector<string>& relations) {
   return result;
 }
 
-int main() {
+void main() {
   cout << solve({"NNNNNN",
                  "YNYNNY",
                  "YNNNNY",

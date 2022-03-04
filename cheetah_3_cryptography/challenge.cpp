@@ -36,7 +36,7 @@ void solve1() {
   printf("%lld\n", ans);
 }
 
-int main() {
+void main() {
   solve1();
   return 0;
 }

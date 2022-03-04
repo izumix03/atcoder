@@ -26,7 +26,7 @@ int solve(const vector<int>& donations) {
   return max(saiki(donations, 0, 0), saiki(donations, 1, 0));
 }
 
-int main() {
+void main() {
   cout << solve({10, 3, 2, 5, 7, 8}) << endl; // 19
   cout << solve({1, 10, 3, 2, 10, 7, 8}) << endl; // 28
   cout << solve({11, 15}) << endl; // 15

@@ -30,7 +30,7 @@ ll solve(vector<int> numbers) {
 }
 
 
-int main() {
+void main() {
   cout << solve({1, 2, 3}) << endl; // 12
   cout << solve({1, 3, 2, 1, 1, 3}) << endl; // 36
   cout << solve({1000, 999, 998, 997, 996, 995}) << endl; // 986074810223904000

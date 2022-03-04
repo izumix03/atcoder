@@ -69,7 +69,7 @@ void answer(vector<string> friends) {
 }
 
 
-int main() {
+void main() {
   vector<string> friends = {"NYY", "YNY", "YYN"};
   solve(friends);
   answer(friends);

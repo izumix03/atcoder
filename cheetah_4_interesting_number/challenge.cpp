@@ -17,7 +17,7 @@ bool check(int i, int base) {
     int result = 0;
 
     for (int r = 0; multi != 0; r++) {
-      result += (multi % base) * power(10, r);
+      result += (multi % base) * twoIsFull(10, r);
       multi /= base;
     }
 
@@ -88,7 +88,7 @@ void answer2() {
   }
 }
 
-int main() {
+void main() {
   bfs(0, 0, 0, 0);
   answer();
   answer2();

@@ -73,5 +73,7 @@ add_executable(agc033_a agc033_a/challenge.cpp)
 add_executable(arc005_c arc005_c/challenge.cpp)
 add_executable(aoj0503 aoj0503/challenge.cpp)
 add_executable(abc054_c abc054_c/challenge.cpp)
+add_executable(joi2010yo_d joi2010yo_d/challenge.cpp)
+add_executable(yukicoder_133 yukicoder_133/challenge.cpp)
 
 

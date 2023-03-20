@@ -12,21 +12,19 @@ using namespace std;
  * 1 <= ai <= 100
  * @return
  */
+ int a[100];
 int main() {
   int N;
 
   int alice = 0, bob = 0;
 
   cin >> N;
-  vector<int> a;
 
   for (int i = 0; i < N; i++) {
-    int x;
-    cin >> x;
-    a.push_back(x);
+    cin >> a[i];
   }
 
-  sort(a.begin(), a.end(), greater<int>());
+  sort(a, a+N, greater<>());
 
   for (int i = 0; i < N; i++) {
     if (i % 2==0){

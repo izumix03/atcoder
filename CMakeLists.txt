@@ -84,4 +84,6 @@ add_executable(abc083_b abc083_b/main.cpp)
 add_executable(abc088_b abc088_b/main.cpp)
 add_executable(abc085_b abc085_b/main.cpp)
 add_executable(abc085_c abc085_c/main.cpp)
+add_executable(abc049_c abc049_c/main.cpp)
+
 

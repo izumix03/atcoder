@@ -48,22 +48,6 @@ int main() {
       return 0;
     }
   }
-//  for (int i = 0; i < N; i++) {
-//    int t;
-//    int x;
-//    int y;
-//
-//    cin >> t >> x >> y;
-//
-//    if (solve(pt, px, py, t, x, y)) {
-//      px = x;
-//      py = y;
-//      pt = t;
-//    } else {
-//      cout << "No" << endl;
-//      return 0;
-//    }
-//  }
 
   cout << "Yes" << endl;
   return 0;
